@@ -2,19 +2,19 @@
 {
 	"Offline"
 	{
-		"#format" "{1:s},{2:s}"
-		"en"	"``` Player {1} has signed out of {2} server.```"
-		"fr"	"``` Le joueur {1} s'est déconnecté du serveur {2}.```"
-		"ro"	"``` Jucătorul {1} ​​s-a deconectat din serverul {2}.```"
-		"kr"	"``` {1} 플레이어가 {2} 서버에서 연결이 끊어졌습니다.```"
+		"#format" "{1:s},{2:s},{3:s},{4:s}"
+		"en"	"``` Player {1}({2}|{3}) has signed out of {2} server.```"
+		"fr"	"``` Le joueur {1}({2}|{3}) s'est déconnecté du serveur {2}.```"
+		"ro"	"``` Jucătorul {1}({2}|{3}) ​​s-a deconectat din serverul {2}.```"
+		"kr"	"``` {1} 플레이어가 ({2} | {3}) 서버에서 연결이 끊어졌습니다.```"
 	}
 	"Join"
 	{
-		"#format" "{1:s},{2:s}"
-		"en"	"```Player {1} has join the {2} server.```"
-		"fr"	"```Le joueur {1} a rejoint le serveur {2}.```"
-		"ro"	"```Jucătorul {1} ​​s-a conectat pe serverul {2}.```"
-		"kr"	"```{1} 플레이어가 {2} 서버에 가입했습니다.```"
+		"#format" "{1:s},{2:s},{3:s},{4:s}"
+		"en"	"```Player {1}({2}|{3}) has join the {2} server.```"
+		"fr"	"```Le joueur {1}({2}|{3}) a rejoint le serveur {4}.```"
+		"ro"	"```Jucătorul {1}({2}|{3}) ​​s-a conectat pe serverul {4}.```"
+		"kr"	"```{1} 플레이어 ({2} | {3})가 서버 {4}에 가입했습니다.```"
 	}
 	"MapStart"
 	{
@@ -31,5 +31,29 @@
 		"fr"	"```Le joueur {1} a été ban pour {2} pendant {3} secondes```"
 		"ro"	"```Jucătorul {1} ​​a fost interzis pentru {2} timp de {3} secunde```"
 		"kr"	"```{1} 플레이어가 {3} 초 동안 {2} 동안 금지되었습니다```"
+	}
+	"SB_OnBan"
+	{
+		"#format" "{1:s},{2:s},{3:s}, {4:s}"
+		"en"	"```Player {1} was banned by {2} for {3} for {4} seconds```"
+		"fr"	"```Le joueur {1} a été ban par {2} pour {3} pendant {4} secondes```"
+		"ro"	"```Jucătorul {1} ​​a fost interzis de {2} pentru {3} timp de {4} secunde```"
+		"kr"	"```{1} 플레이어가 {4} 초 동안 {3} 동안 {2}에 의해 금지되었습니다```"
+	}
+	"SB_OnReport"
+	{
+		"#format" "{1:s},{2:s},{3:s}"
+		"en"	"```Player {1} was reported by {2} for {3}```"
+		"fr"	"```Le joueur {1} a été signalé par {2} pour {3}```"
+		"ro"	"```Jucătorul {1} ​​a fost raportat de {2} pentru {3}```"
+		"kr"	"```{1} 플레이어가 {3}에 대해 {2}에 의해보고되었습니다.```"
+	}
+	"SB_OnBanRemoved"
+	{
+		"#format" "{1:s}"
+		"en"	"```{1} has been removed from the list of bans```"
+		"fr"	"```{1} a été supprimé de la liste des bans```"
+		"ro"	"```{1} a fost șterse din lista interdicțiilor```"
+		"kr"	"```금지 목록에서 {1}이 (가) 제거되었습니다```"
 	}
 }
