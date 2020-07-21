@@ -3,15 +3,15 @@
 	"Offline"
 	{
 		"#format" "{1:s},{2:s},{3:s},{4:s}"
-		"en"	"``` Player {1}({2}|{3}) has signed out of {2} server.```"
-		"fr"	"``` Le joueur {1}({2}|{3}) s'est déconnecté du serveur {2}.```"
-		"ro"	"``` Jucătorul {1}({2}|{3}) ​​s-a deconectat din serverul {2}.```"
-		"kr"	"``` {1} 플레이어가 ({2} | {3}) 서버에서 연결이 끊어졌습니다.```"
+		"en"	"``` Player {1}({2}|{3}) has signed out of {4} server.```"
+		"fr"	"``` Le joueur {1}({2}|{3}) s'est déconnecté du serveur {4}.```"
+		"ro"	"``` Jucătorul {1}({2}|{3}) ​​s-a deconectat din serverul {4}.```"
+		"kr"	"``` {1} 플레이어가 ({2} | {3}) 서버에서 {4} 연결이 끊어졌습니다.```"
 	}
 	"Join"
 	{
 		"#format" "{1:s},{2:s},{3:s},{4:s}"
-		"en"	"```Player {1}({2}|{3}) has join the {2} server.```"
+		"en"	"```Player {1}({2}|{3}) has join the {4} server.```"
 		"fr"	"```Le joueur {1}({2}|{3}) a rejoint le serveur {4}.```"
 		"ro"	"```Jucătorul {1}({2}|{3}) ​​s-a conectat pe serverul {4}.```"
 		"kr"	"```{1} 플레이어 ({2} | {3})가 서버 {4}에 가입했습니다.```"

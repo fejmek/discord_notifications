@@ -69,8 +69,11 @@ public Action Say(int client, char[] Cmd, int args)
 				
 				char webhook[64];
 				GetConVarString(Discord_WebHook, webhook, sizeof(webhook));
+				
+				char finalMessage[128];
+				Format(finalMessage, sizeof(finalMessage), "[%N]: %s", strName, arg);
 						
-				Discord_SendMessage(webhook, arg);			
+				Discord_SendMessage(webhook, finalMessage);			
 			}					
 		}
 	}
@@ -98,7 +101,7 @@ public Action OnPlayerDisconnect(Event event, char[] name, bool dontBroadcast)
 		char steamid[32];
 		GetClientAuthId(client, AuthId_Steam2, steamid, sizeof(steamid), true);
 		
-		char translate[64];
+		char translate[128];
 		Format(translate, sizeof(translate), "%T", "Offline", LANG_SERVER, clientName, ip, steamid, hostname);		
 		Discord_SendMessage(webhook, translate);
 	}
@@ -125,7 +128,7 @@ public Action OnClientPreAdminCheck(int client)
 		char steamid[32];
 		GetClientAuthId(client, AuthId_Steam2, steamid, sizeof(steamid), true);
 		
-		char translate[64];
+		char translate[128];
 		Format(translate, sizeof(translate), "%T", "Join", LANG_SERVER, clientName, ip, steamid, hostname);		
 		Discord_SendMessage(webhook, translate);
 	}
@@ -139,7 +142,7 @@ public Action OnBanClient(int client, int time, int flags, const char[] reason, 
 	char webhook[64];
 	GetConVarString(Discord_WebHook, webhook, sizeof(webhook));
 		
-	char translate[64];
+	char translate[128];
 	Format(translate, sizeof(translate), "%T", "OnBan", LANG_SERVER, clientName, time, reason);		
 	Discord_SendMessage(webhook, translate);
 }
@@ -149,7 +152,7 @@ public void SBPP_OnBanPlayer(int iAdmin, int iTarget, int iTime, const char[] sR
 	char webhook[64];
 	GetConVarString(Discord_WebHook, webhook, sizeof(webhook));
 		
-	char translate[64];
+	char translate[128];
 	Format(translate, sizeof(translate), "%T", "SB_OnBan", LANG_SERVER, iTarget, iAdmin, iTime, sReason);		
 	Discord_SendMessage(webhook, translate);
 }	
