@@ -2,10 +2,11 @@
 #pragma newdecls required
 
 #define PLUGIN_AUTHOR "Benito"
-#define PLUGIN_VERSION "0.00"
+#define PLUGIN_VERSION "1.0"
 
 #include <sourcemod>
 #include <sdktools>
+#include <basecomm>
 #include <discord>
 
 ConVar Discord_WebHook = null;
@@ -205,6 +206,42 @@ public Action OnRemoveBan(const char[] identity, int flags, const char[] command
 	
 	Discord_SendMessage(webhook, translate);	
 }	
+
+public void BaseComm_OnClientMute(int client, bool muteState)
+{
+	char webhook[64];
+	GetConVarString(Discord_WebHook, webhook, sizeof(webhook));
+	
+	char name[64];
+	GetClientName(client, name, sizeof(name));
+	
+	char translate[128];
+	
+	if(muteState)
+		Format(translate, sizeof(translate), "%T", "Mute", LANG_SERVER, name);	
+	else
+		Format(translate, sizeof(translate), "%T", "UnMute", LANG_SERVER, name);		
+	
+	Discord_SendMessage(webhook, translate);	
+}	
+
+public void BaseComm_OnClientGag(int client, bool gagState)
+{
+	char webhook[64];
+	GetConVarString(Discord_WebHook, webhook, sizeof(webhook));
+	
+	char name[64];
+	GetClientName(client, name, sizeof(name));
+	
+	char translate[128];
+	
+	if(gagState)
+		Format(translate, sizeof(translate), "%T", "Gag", LANG_SERVER, name);	
+	else
+		Format(translate, sizeof(translate), "%T", "UnGag", LANG_SERVER, name);		
+	
+	Discord_SendMessage(webhook, translate);	
+}
 
 bool IsClientValid(int client, bool bAlive = false) 
 {
