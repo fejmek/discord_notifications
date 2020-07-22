@@ -3,18 +3,18 @@
 	"Offline_Auth"
 	{
 		"#format" "{1:s},{2:s},{3:s},{4:s}"
-		"en"	"``` Player {1}({2}|{3}) has signed out of {4} server.```"
-		"fr"	"``` Le joueur {1}({2}|{3}) s'est déconnecté du serveur {4}.```"
-		"ro"	"``` Jucătorul {1}({2}|{3}) ​​s-a deconectat din serverul {4}.```"
-		"kr"	"``` {1} 플레이어가 ({2} | {3}) 서버에서 {4} 연결이 끊어졌습니다.```"
+		"en"	"```Player {1}({2}|{3}) has signed out of {4} server.```"
+		"fr"	"```Le joueur {1}({2}|{3}) s'est déconnecté du serveur {4}.```"
+		"ro"	"```Jucătorul {1}({2}|{3}) ​​s-a deconectat din serverul {4}.```"
+		"kr"	"```{1} 플레이어가 ({2} | {3}) 서버에서 {4} 연결이 끊어졌습니다.```"
 	}
 	"Offline_NoAuth"
 	{
 		"#format" "{1:s},{2:s}"
-		"en"	"``` Player {1} has signed out of {2} server.```"
-		"fr"	"``` Le joueur {1} s'est déconnecté du serveur {2}.```"
-		"ro"	"``` Jucătorul {1} ​​s-a deconectat din serverul {2}.```"
-		"kr"	"``` {1} 플레이어가  서버에서 {2} 연결이 끊어졌습니다.```"
+		"en"	"```Player {1} has signed out of {2} server.```"
+		"fr"	"```Le joueur {1} s'est déconnecté du serveur {2}.```"
+		"ro"	"```Jucătorul {1} ​​s-a deconectat din serverul {2}.```"
+		"kr"	"```{1} 플레이어가  서버에서 {2} 연결이 끊어졌습니다.```"
 	}
 	"Join_Auth"
 	{
@@ -71,5 +71,13 @@
 		"fr"	"```{1} a été supprimé de la liste des bans```"
 		"ro"	"```{1} a fost șterse din lista interdicțiilor```"
 		"kr"	"```금지 목록에서 {1}이 (가) 제거되었습니다```"
+	}
+	"Kill"
+	{
+		"#format" "{1:s},{2:s},{3:s}"
+		"en"	"```Player {1} killed {2} with a {3}.```"
+		"fr"	"```Le joueur {1} a tué {2} avec un/une {3}.```"
+		"ro"	"```Jucătorul {1} ​​a ucis {2} cu un {3}.```"
+		"kr"	"```{1} 플레이어가 {3}으로 {2}를 죽였습니다```"
 	}
 }

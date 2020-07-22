@@ -11,6 +11,7 @@
 ConVar Discord_WebHook = null;
 ConVar Discord_RetrieveMessages = null;
 ConVar Discord_DisplayAuth = null;
+ConVar Discord_KillNotif = null;
 
 public Plugin myinfo = 
 {
@@ -26,12 +27,41 @@ public void OnPluginStart()
 	LoadTranslations("discord_notification.phrases");
 	
 	HookEvent("player_disconnect", OnPlayerDisconnect, EventHookMode_Pre);
+	HookEvent("player_death", OnPlayerDeath);
 	AddCommandListener(Say, "say");
 	
 	Discord_WebHook = CreateConVar("discord_webhook", "log", "Default webhook for sending logs.");
 	Discord_RetrieveMessages = CreateConVar("discord_messages", "1", "1 = Enabled / 0 = Disabled retrieves the players messages on discord.");
 	Discord_DisplayAuth = CreateConVar("discord_auth", "1", "1 = Enabled / 0 = Disabled retrieves the players steamid and ip on discord.");
+	Discord_KillNotif = CreateConVar("discord_killedby", "1", "1 = Enabled / 0 = Disabled retrieves the killer and the victim of a kill.");
 	AutoExecConfig(true, "discord_notification");
+}
+
+public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast)
+{	
+	int client = GetClientOfUserId(event.GetInt("userid"));
+	int killer = GetClientOfUserId(event.GetInt("attacker")); 
+	char weapon[64];
+	event.GetString("weapon", weapon, sizeof(weapon));
+
+	if(GetConVarBool(Discord_KillNotif) == true)
+	{
+		if (StrContains(weapon, "weapon_") != -1) 
+		{
+			char weaponPart[2][32];
+			ExplodeString(weapon, "_", weaponPart, 2, 32);
+			strcopy(weapon, sizeof(weapon), weaponPart[1]);
+		}
+		
+		char webhook[64];
+		GetConVarString(Discord_WebHook, webhook, sizeof(webhook));
+				
+		char translate[128];
+		Format(translate, sizeof(translate), "%T", "Kill", LANG_SERVER, killer, client, weapon);								
+		Discord_SendMessage(webhook, translate);
+	}			
+	
+	return Plugin_Continue;
 }
 
 public void OnMapEnd()
