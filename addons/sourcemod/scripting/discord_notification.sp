@@ -11,6 +11,7 @@
 
 ConVar Discord_WebHook = null;
 ConVar Discord_RetrieveMessages = null;
+ConVar Discord_DisplayAuth = null;
 
 public Plugin myinfo = 
 {
@@ -30,6 +31,7 @@ public void OnPluginStart()
 	
 	Discord_WebHook = CreateConVar("discord_webhook", "log", "Default webhook for sending logs.");
 	Discord_RetrieveMessages = CreateConVar("discord_messages", "1", "1 = Enabled / 0 = Disabled retrieves the players messages on discord.");
+	Discord_DisplayAuth = CreateConVar("discord_auth", "1", "1 = Enabled / 0 = Disabled retrieves the players steamid and ip on discord.");
 	AutoExecConfig(true, "discord_notification");
 }
 
@@ -103,7 +105,10 @@ public Action OnPlayerDisconnect(Event event, char[] name, bool dontBroadcast)
 		GetClientAuthId(client, AuthId_Steam2, steamid, sizeof(steamid), true);
 		
 		char translate[128];
-		Format(translate, sizeof(translate), "%T", "Offline", LANG_SERVER, clientName, ip, steamid, hostname);		
+		if(GetConVarBool(Discord_DisplayAuth) == true)			
+			Format(translate, sizeof(translate), "%T", "Offline_Auth", LANG_SERVER, clientName, ip, steamid, hostname);	
+		else
+			Format(translate, sizeof(translate), "%T", "Offline_NoAuth", LANG_SERVER, clientName, hostname);			
 		Discord_SendMessage(webhook, translate);
 	}
  
@@ -130,7 +135,11 @@ public Action OnClientPreAdminCheck(int client)
 		GetClientAuthId(client, AuthId_Steam2, steamid, sizeof(steamid), true);
 		
 		char translate[128];
-		Format(translate, sizeof(translate), "%T", "Join", LANG_SERVER, clientName, ip, steamid, hostname);		
+		
+		if(GetConVarBool(Discord_DisplayAuth) == true)
+			Format(translate, sizeof(translate), "%T", "Join_Auth", LANG_SERVER, clientName, ip, steamid, hostname);		
+		else
+			Format(translate, sizeof(translate), "%T", "Join_NoAuth", LANG_SERVER, clientName, hostname);				
 		Discord_SendMessage(webhook, translate);
 	}
 }
