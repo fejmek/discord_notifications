@@ -71,7 +71,7 @@ public Action Say(int client, char[] Cmd, int args)
 				GetConVarString(Discord_WebHook, webhook, sizeof(webhook));
 				
 				char finalMessage[128];
-				Format(finalMessage, sizeof(finalMessage), "[%N]: %s", strName, arg);
+				Format(finalMessage, sizeof(finalMessage), "[%s]: %s", strName, arg);
 						
 				Discord_SendMessage(webhook, finalMessage);			
 			}					

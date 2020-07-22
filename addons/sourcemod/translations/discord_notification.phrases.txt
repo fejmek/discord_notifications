@@ -34,7 +34,7 @@
 	}
 	"SB_OnBan"
 	{
-		"#format" "{1:s},{2:s},{3:s}, {4:s}"
+		"#format" "{1:s},{2:s},{3:s},{4:s}"
 		"en"	"```Player {1} was banned by {2} for {3} for {4} seconds```"
 		"fr"	"```Le joueur {1} a été ban par {2} pour {3} pendant {4} secondes```"
 		"ro"	"```Jucătorul {1} ​​a fost interzis de {2} pentru {3} timp de {4} secunde```"
