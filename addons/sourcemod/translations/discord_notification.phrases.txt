@@ -80,4 +80,36 @@
 		"ro"	"```Jucătorul {1} ​​a ucis {2} cu un {3}.```"
 		"kr"	"```{1} 플레이어가 {3}으로 {2}를 죽였습니다```"
 	}
+	"Mute"
+	{
+		"#format" "{1:s}"
+		"en"	"```Player {1} was muted```"
+		"fr"	"```Le joueur {1} a tué mute.```"
+		"ro"	"```Jucătorul {1} ​​a fost mut.```"
+		"kr"	"```{1} 플레이어가 음소거되었습니다```"
+	}
+	"UnMute"
+	{
+		"#format" "{1:s}"
+		"en"	"```Player {1} was unmuted.```"
+		"fr"	"```Le joueur {1} a été demute.```"
+		"ro"	"```Jucătorul {1} ​​a fost unmut.```"
+		"kr"	"```{1} 플레이어가 음소거 해제되었습니다```"
+	}
+	"Gag"
+	{
+		"#format" "{1:s}"
+		"en"	"```Player {1} was gagged.```"
+		"fr"	"```Le joueur {1} a été gag.```"
+		"ro"	"```Jucătorul {1} ​​a fost gag.```"
+		"kr"	"```{1} 플레이어가 재갈을 물 렸습니다.```"
+	}
+	"UnGag"
+	{
+		"#format" "{1:s}"
+		"en"	"```Player {1} was ungagged.```"
+		"fr"	"```Le joueur {1} a été ungag.```"
+		"ro"	"```Jucătorul {1} a fost ungag.```"
+		"kr"	"```{1} 플레이어가 엉망이되었습니다.```"
+	}
 }
