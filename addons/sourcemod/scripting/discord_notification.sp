@@ -72,13 +72,14 @@ public Action Say(int client, char[] Cmd, int args)
 				
 				char finalMessage[128];
 				Format(finalMessage, sizeof(finalMessage), "[%s]: %s", strName, arg);
-						
+				
+				//CPrintToChatAll("%s: %s", strName, arg);						
 				Discord_SendMessage(webhook, finalMessage);			
 			}					
 		}
 	}
 	
-	return Plugin_Handled;
+	return Plugin_Continue;
 }
 
 public Action OnPlayerDisconnect(Event event, char[] name, bool dontBroadcast)
