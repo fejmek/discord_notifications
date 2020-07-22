@@ -7,7 +7,6 @@
 #include <sourcemod>
 #include <sdktools>
 #include <discord>
-#tryinclude <sourcebanspp>
 
 ConVar Discord_WebHook = null;
 ConVar Discord_RetrieveMessages = null;
@@ -156,26 +155,6 @@ public Action OnBanClient(int client, int time, int flags, const char[] reason, 
 	Format(translate, sizeof(translate), "%T", "OnBan", LANG_SERVER, clientName, time, reason);		
 	Discord_SendMessage(webhook, translate);
 }
-
-public void SBPP_OnBanPlayer(int iAdmin, int iTarget, int iTime, const char[] sReason)
-{
-	char webhook[64];
-	GetConVarString(Discord_WebHook, webhook, sizeof(webhook));
-		
-	char translate[128];
-	Format(translate, sizeof(translate), "%T", "SB_OnBan", LANG_SERVER, iTarget, iAdmin, iTime, sReason);		
-	Discord_SendMessage(webhook, translate);
-}	
-
-public void SBPP_OnReportPlayer(int iReporter, int iTarget, const char[] sReason)
-{
-	char webhook[64];
-	GetConVarString(Discord_WebHook, webhook, sizeof(webhook));
-		
-	char translate[64];
-	Format(translate, sizeof(translate), "%T", "SB_OnReport", LANG_SERVER, iTarget, iReporter, sReason);		
-	Discord_SendMessage(webhook, translate);
-}	
 
 public Action OnRemoveBan(const char[] identity, int flags, const char[] command, any source)
 {
