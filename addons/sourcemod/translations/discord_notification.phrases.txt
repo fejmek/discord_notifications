@@ -7,6 +7,7 @@
 		"fr"	"```Le joueur {1}({2}|{3}) s'est déconnecté du serveur {4}.```"
 		"ro"	"```Jucătorul {1}({2}|{3}) ​​s-a deconectat din serverul {4}.```"
 		"kr"	"```{1} 플레이어가 ({2} | {3}) 서버에서 {4} 연결이 끊어졌습니다.```"
+		"pl"	"``` Gracz {1}({2}|{3}) wyszedł z serwera {4}```"
 	}
 	"Offline_NoAuth"
 	{
@@ -15,6 +16,7 @@
 		"fr"	"```Le joueur {1} s'est déconnecté du serveur {2}.```"
 		"ro"	"```Jucătorul {1} ​​s-a deconectat din serverul {2}.```"
 		"kr"	"```{1} 플레이어가  서버에서 {2} 연결이 끊어졌습니다.```"
+		"pl"	"``` Gracz {1} wyszedł z serwera {2}```"
 	}
 	"Join_Auth"
 	{
@@ -23,6 +25,7 @@
 		"fr"	"```Le joueur {1}({2}|{3}) a rejoint le serveur {4}.```"
 		"ro"	"```Jucătorul {1}({2}|{3}) ​​s-a conectat pe serverul {4}.```"
 		"kr"	"```{1} 플레이어 ({2} | {3})가 서버 {4}에 가입했습니다.```"
+		"pl"	"```Gracz {1}({2}|{3}) dołączył do serwera {4}```"
 	}
 	"Join_NoAuth"
 	{
@@ -31,6 +34,7 @@
 		"fr"	"```Le joueur {1} a rejoint le serveur {2}.```"
 		"ro"	"```Jucătorul {1} ​​s-a conectat pe serverul {2}.```"
 		"kr"	"```{1} 플레이어 가 서버 {2}에 가입했습니다.```"
+		"pl"	"```Gracz {1} dołączył do serwera {2} ```"
 	}
 	"MapStart"
 	{
@@ -39,6 +43,7 @@
 		"fr"	"```Lancement de {1}```"
 		"ro"	"```Lansarea {1}```"
 		"kr"	"```발사 {1}```"
+		"pl"	"```Ładowanie {1}```"
 	}
 	"OnBan"
 	{
@@ -47,6 +52,7 @@
 		"fr"	"```Le joueur {1} a été ban pour {2} pendant {3} secondes```"
 		"ro"	"```Jucătorul {1} ​​a fost interzis pentru {2} timp de {3} secunde```"
 		"kr"	"```{1} 플레이어가 {3} 초 동안 {2} 동안 금지되었습니다```"
+		"pl"	"```Gracz {1} został zbanowany za {2} na {3} sekund```"
 	}
 	"SB_OnBan"
 	{
@@ -55,6 +61,7 @@
 		"fr"	"```Le joueur {1} a été ban par {2} pour {3} pendant {4} secondes```"
 		"ro"	"```Jucătorul {1} ​​a fost interzis de {2} pentru {3} timp de {4} secunde```"
 		"kr"	"```{1} 플레이어가 {4} 초 동안 {3} 동안 {2}에 의해 금지되었습니다```"
+		"pl"	"```Gracz {1} został zbanowany przez {2} za {3} na {4} sekund```"
 	}
 	"SB_OnReport"
 	{
@@ -63,6 +70,7 @@
 		"fr"	"```Le joueur {1} a été signalé par {2} pour {3}```"
 		"ro"	"```Jucătorul {1} ​​a fost raportat de {2} pentru {3}```"
 		"kr"	"```{1} 플레이어가 {3}에 대해 {2}에 의해보고되었습니다.```"
+		"pl"	"```Gracz {1} został zgłoszony przez {2} za {3}```"
 	}
 	"SB_OnBanRemoved"
 	{
@@ -71,6 +79,7 @@
 		"fr"	"```{1} a été supprimé de la liste des bans```"
 		"ro"	"```{1} a fost șterse din lista interdicțiilor```"
 		"kr"	"```금지 목록에서 {1}이 (가) 제거되었습니다```"
+		"pl"	"```{1} został usunięty z listy banów```"
 	}
 	"Kill"
 	{
@@ -79,6 +88,7 @@
 		"fr"	"```Le joueur {1} a tué {2} avec un/une {3}.```"
 		"ro"	"```Jucătorul {1} ​​a ucis {2} cu un {3}.```"
 		"kr"	"```{1} 플레이어가 {3}으로 {2}를 죽였습니다```"
+		"pl"	"```Gracz {1} zabił {2} z {3}.```"
 	}
 	"Mute"
 	{
@@ -87,6 +97,7 @@
 		"fr"	"```Le joueur {1} a tué mute.```"
 		"ro"	"```Jucătorul {1} ​​a fost mut.```"
 		"kr"	"```{1} 플레이어가 음소거되었습니다```"
+		"pl"	"```Gracz {1} został zmutowany.```"
 	}
 	"UnMute"
 	{
@@ -95,6 +106,7 @@
 		"fr"	"```Le joueur {1} a été demute.```"
 		"ro"	"```Jucătorul {1} ​​a fost unmut.```"
 		"kr"	"```{1} 플레이어가 음소거 해제되었습니다```"
+		"pl"	"```Gracz {1} został odmutowany.```"
 	}
 	"Gag"
 	{
@@ -103,6 +115,7 @@
 		"fr"	"```Le joueur {1} a été gag.```"
 		"ro"	"```Jucătorul {1} ​​a fost gag.```"
 		"kr"	"```{1} 플레이어가 재갈을 물 렸습니다.```"
+		"pl"	"```Gracz {1} został zakneblowany.```"
 	}
 	"UnGag"
 	{
@@ -111,5 +124,6 @@
 		"fr"	"```Le joueur {1} a été ungag.```"
 		"ro"	"```Jucătorul {1} a fost ungag.```"
 		"kr"	"```{1} 플레이어가 엉망이되었습니다.```"
+		"pl"	"```Gracz {1} został odkneblowany.```"
 	}
 }
