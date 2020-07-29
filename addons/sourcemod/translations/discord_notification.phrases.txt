@@ -3,19 +3,19 @@
 	"Offline_Auth"
 	{
 		"#format" "{1:s},{2:s},{3:s},{4:s}"
-		"en"	"``` Player {1}({2}|{3}) has signed out of {4} server.```"
-		"fr"	"``` Le joueur {1}({2}|{3}) s'est déconnecté du serveur {4}.```"
-		"ro"	"``` Jucătorul {1}({2}|{3}) ​​s-a deconectat din serverul {4}.```"
-		"kr"	"``` {1} 플레이어가 ({2} | {3}) 서버에서 {4} 연결이 끊어졌습니다.```"
+		"en"	"```Player {1}({2}|{3}) has signed out of {4} server.```"
+		"fr"	"```Le joueur {1}({2}|{3}) s'est déconnecté du serveur {4}.```"
+		"ro"	"```Jucătorul {1}({2}|{3}) ​​s-a deconectat din serverul {4}.```"
+		"kr"	"```{1} 플레이어가 ({2} | {3}) 서버에서 {4} 연결이 끊어졌습니다.```"
 		"pl"	"``` Gracz {1}({2}|{3}) wyszedł z serwera {4}```"
 	}
 	"Offline_NoAuth"
 	{
 		"#format" "{1:s},{2:s}"
-		"en"	"``` Player {1} has signed out of {2} server.```"
-		"fr"	"``` Le joueur {1} s'est déconnecté du serveur {2}.```"
-		"ro"	"``` Jucătorul {1} ​​s-a deconectat din serverul {2}.```"
-		"kr"	"``` {1} 플레이어가  서버에서 {2} 연결이 끊어졌습니다.```"
+		"en"	"```Player {1} has signed out of {2} server.```"
+		"fr"	"```Le joueur {1} s'est déconnecté du serveur {2}.```"
+		"ro"	"```Jucătorul {1} ​​s-a deconectat din serverul {2}.```"
+		"kr"	"```{1} 플레이어가  서버에서 {2} 연결이 끊어졌습니다.```"
 		"pl"	"``` Gracz {1} wyszedł z serwera {2}```"
 	}
 	"Join_Auth"
@@ -43,7 +43,7 @@
 		"fr"	"```Lancement de {1}```"
 		"ro"	"```Lansarea {1}```"
 		"kr"	"```발사 {1}```"
-		"en"	"```Ładowanie {1}```"
+		"pl"	"```Ładowanie {1}```"
 	}
 	"OnBan"
 	{
@@ -80,5 +80,50 @@
 		"ro"	"```{1} a fost șterse din lista interdicțiilor```"
 		"kr"	"```금지 목록에서 {1}이 (가) 제거되었습니다```"
 		"pl"	"```{1} został usunięty z listy banów```"
+	}
+	"Kill"
+	{
+		"#format" "{1:s},{2:s},{3:s}"
+		"en"	"```Player {1} killed {2} with a {3}.```"
+		"fr"	"```Le joueur {1} a tué {2} avec un/une {3}.```"
+		"ro"	"```Jucătorul {1} ​​a ucis {2} cu un {3}.```"
+		"kr"	"```{1} 플레이어가 {3}으로 {2}를 죽였습니다```"
+		"pl"	"```Gracz {1} zabił {2} z {3}.```"
+	}
+	"Mute"
+	{
+		"#format" "{1:s}"
+		"en"	"```Player {1} was muted```"
+		"fr"	"```Le joueur {1} a tué mute.```"
+		"ro"	"```Jucătorul {1} ​​a fost mut.```"
+		"kr"	"```{1} 플레이어가 음소거되었습니다```"
+		"pl"	"```Gracz {1} został zmutowany.```"
+	}
+	"UnMute"
+	{
+		"#format" "{1:s}"
+		"en"	"```Player {1} was unmuted.```"
+		"fr"	"```Le joueur {1} a été demute.```"
+		"ro"	"```Jucătorul {1} ​​a fost unmut.```"
+		"kr"	"```{1} 플레이어가 음소거 해제되었습니다```"
+		"pl"	"```Gracz {1} został odmutowany.```"
+	}
+	"Gag"
+	{
+		"#format" "{1:s}"
+		"en"	"```Player {1} was gagged.```"
+		"fr"	"```Le joueur {1} a été gag.```"
+		"ro"	"```Jucătorul {1} ​​a fost gag.```"
+		"kr"	"```{1} 플레이어가 재갈을 물 렸습니다.```"
+		"pl"	"```Gracz {1} został zakneblowany.```"
+	}
+	"UnGag"
+	{
+		"#format" "{1:s}"
+		"en"	"```Player {1} was ungagged.```"
+		"fr"	"```Le joueur {1} a été ungag.```"
+		"ro"	"```Jucătorul {1} a fost ungag.```"
+		"kr"	"```{1} 플레이어가 엉망이되었습니다.```"
+		"pl"	"```Gracz {1} został odkneblowany.```"
 	}
 }
